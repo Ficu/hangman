@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hangman", "hangman\hangman.csproj", "{6E3F71AE-380F-4628-A632-269EC5826F93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hangmanLib", "hangmanLib\hangmanLib.csproj", "{5E003F65-4980-4485-935F-B8D8B6F9CB4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
@@ -13,5 +15,9 @@ Global
 		{6E3F71AE-380F-4628-A632-269EC5826F93}.Debug|anycpu.Build.0 = Debug|anycpu
 		{6E3F71AE-380F-4628-A632-269EC5826F93}.Release|anycpu.ActiveCfg = Release|anycpu
 		{6E3F71AE-380F-4628-A632-269EC5826F93}.Release|anycpu.Build.0 = Release|anycpu
+		{5E003F65-4980-4485-935F-B8D8B6F9CB4E}.Debug|anycpu.ActiveCfg = Debug|Any CPU
+		{5E003F65-4980-4485-935F-B8D8B6F9CB4E}.Debug|anycpu.Build.0 = Debug|Any CPU
+		{5E003F65-4980-4485-935F-B8D8B6F9CB4E}.Release|anycpu.ActiveCfg = Release|Any CPU
+		{5E003F65-4980-4485-935F-B8D8B6F9CB4E}.Release|anycpu.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
