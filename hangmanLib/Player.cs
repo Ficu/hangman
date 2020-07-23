@@ -4,6 +4,7 @@ namespace hangmanLib
     public class Player
     {
         private int _playerScore;
+        private int _playerAttempts;
 
         public Player()
         {
@@ -22,5 +23,19 @@ namespace hangmanLib
                 _playerScore = value;
             }
         }
+
+        public int PlayerAttempts
+        {
+            get
+            {
+                return _playerAttempts;
+            }
+
+            set
+            {
+                _playerAttempts = value;
+            }
+        }
+
     }
 }

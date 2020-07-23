@@ -8,11 +8,8 @@ namespace hangman
         public static void Main(string[] args)
         {
 
-            
-
             Player gracz = new Player();
-            gracz.PlayerScore = 0;
-            Console.WriteLine(gracz.PlayerScore);
+
             do
             {
                 showMenu();
@@ -24,6 +21,7 @@ namespace hangman
                 {
                     case 1:
                         Game game = new Game();
+                        gracz.PlayerAttempts++;
                         string word = game.newGame();
                         char[] wordLetters = new char[word.Length];
 
@@ -31,12 +29,17 @@ namespace hangman
                         {
                             wordLetters[i] = '_';
                         }
-
+                        Console.WriteLine(wordLetters);
+                        Console.WriteLine("\n\n");
                         do
                         {
                             Console.WriteLine("Podaj literę: ");
-
-                            string input = Console.ReadLine();
+                            string input;
+                            do
+                            {
+                                 input = Console.ReadLine();
+                            } while (string.IsNullOrEmpty(input));
+                            
                             input = input.ToUpper();
                             char letter = input[0];
 
@@ -50,8 +53,9 @@ namespace hangman
                             }
 
                             Console.WriteLine(wordLetters);
+                            Console.Write("\n");
 
-                            if(game.tryCounter == 5)
+                            if(game.tryCounter == 4)
                             {
                                 Console.WriteLine("\nPoprawna odpowiedź to: " + word);
                                 Console.WriteLine("Koniec gry! Nie udalo Ci sie zgadnac slowa, sprobuj jeszcze raz :) \n");
@@ -72,9 +76,13 @@ namespace hangman
                         break;
                     case 2:
                         Console.WriteLine("Twój obecny wynik to " + gracz.PlayerScore);
+                        Console.WriteLine("Odbyłeś już " + gracz.PlayerAttempts + " gier.");
+
                         break;
                     case 3:
-                        Console.WriteLine("Żegnamy reklamy");
+                        Console.WriteLine("Koniec gry");
+                        Console.WriteLine("Twój wynik to: " + gracz.PlayerScore);
+                        Console.WriteLine("Ilosc twoich gier to: " + gracz.PlayerAttempts);
                         Environment.Exit(0);
                         break;
                 }

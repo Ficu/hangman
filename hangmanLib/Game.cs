@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace hangmanLib
 {
     public class Game
     {
         private List<string> words = new List<string>
-            { "OLA", "ALA" };
+            { "OLA", "ALA", "ROWER", "TRAMWAJ", "WODA", "SOK", "SZAFA", "ANASTAZJOLOG", "ORTODONTA", "OKULISTA" };
 
         public List<char> askedChar = new List<char>();
 
